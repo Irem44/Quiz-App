@@ -19,6 +19,9 @@ export class QuestionsComponent {
   increase() {
     if (this.questions.questionsAllGet.length - 1 < this.counter) {
       alert('sorular bitti');
+      this.counter = 1;
+      this.selectedKey = '';
+      this.isCorrect = null;
     } else {
       this.counter++;
       this.selectedKey = '';

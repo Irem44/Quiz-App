@@ -6,13 +6,13 @@
   align-items: center;
 
   .sub_questions_container {
-    width: 500px;
-    height: 400px;
+    width: 530px;
+    height: 500px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 2px solid purple;
+    border: 4px solid purple;
     border-radius: 10px;
 
     .inside_container {
@@ -25,12 +25,12 @@
 
       img {
         border-radius: 100%;
-        margin-bottom: 30px;
+        margin-bottom: 15px;
       }
 
       .options {
-        width: 400px;
-        height: 30px;
+        width: 450px;
+        height: 40px;
         border: 1px solid rgb(182, 182, 9);
         border-radius: 10px;
         margin-bottom: 20px;
@@ -43,6 +43,21 @@
         background-color: rgb(182, 182, 9);
         color: #fff;
       }
+    }
+
+    .next_button {
+      width: 80px;
+      height: 40px;
+      padding: 10px;
+      background-color: purple;
+      color: #fff;
+      border: 1px solid purple;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+      cursor: pointer;
     }
   }
 }
