@@ -5,6 +5,7 @@ import { provideRouter } from '@angular/router';
 import { HomeComponent } from './app/components/home/home.component';
 import { NotPageComponent } from './app/components/not-page/not-page.component';
 import { QuestionsComponent } from './app/components/questions/questions.component';
+import { ResultsComponent } from './app/components/results/results.component';
 
 bootstrapApplication(AppComponent, {
   providers: [
@@ -13,6 +14,7 @@ bootstrapApplication(AppComponent, {
       { path: '', redirectTo: 'home', pathMatch: 'full' },
       { path: 'home', component: HomeComponent },
       { path: 'questions', component: QuestionsComponent },
+      { path: 'result', component: ResultsComponent },
       { path: '**', component: NotPageComponent },
     ]),
   ],

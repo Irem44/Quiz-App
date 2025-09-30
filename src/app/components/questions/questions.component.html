@@ -2,6 +2,9 @@
   <div class="sub_questions_container">
     <div *ngFor="let i of questions.questionsAllGet">
       <div *ngIf="i.id == counter" class="inside_container">
+        <div class="questions_number">
+          {{ i.id }}/{{ questions.questionsAllGet.length }}
+        </div>
         <img
           src="{{ i.imgUrl }}"
           alt="resim bulunamadı"
@@ -21,6 +24,29 @@
         </button>
       </div>
     </div>
-    <button type="button" (click)="increase()" class="next_button">Next</button>
+
+    <div
+      style="
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+      "
+    >
+      <button type="button" (click)="increase()" class="next_button">
+        Next
+      </button>
+      <a
+        routerLink="/result"
+        class="next_button"
+        [queryParams]="{
+          trueCounter: isCorrectTrueCounter.length,
+          falseCounter: isCorrectFalseCounter.length,
+          blankCounter: isCorrectBlankCounter.length
+        }"
+        >Result</a
+      >
+    </div>
   </div>
 </div>
