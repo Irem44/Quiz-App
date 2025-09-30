@@ -1,7 +1,16 @@
 <div class="start_container">
   <div class="start_sub_container">
-    <div class="button">
-      <a routerLink="/questions">Start Quiz</a>
-    </div>
+    <select
+      name="categories"
+      id="categories"
+      class="button"
+      (change)="onCategoryChange($event)"
+    >
+      <option value="" disabled selected>Choose a category</option>
+      <option value="Fruits">Fruits</option>
+      <option value="Vegatables">Vegatables</option>
+      <option value="Room">Room</option>
+      <option value="Kitchen">Kitchen</option>
+    </select>
   </div>
 </div>

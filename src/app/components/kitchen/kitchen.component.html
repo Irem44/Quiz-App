@@ -1,0 +1,52 @@
+<div class="questions_container">
+  <div class="sub_questions_container">
+    <div *ngFor="let i of kitchen.KitchenAllGet">
+      <div *ngIf="i.id == counter" class="inside_container">
+        <div class="questions_number">
+          {{ i.id }}/{{ kitchen.KitchenAllGet.length }}
+        </div>
+        <img
+          src="{{ i.imgUrl }}"
+          alt="resim bulunamadı"
+          width="180px"
+          height="180px"
+        />
+        <button
+          class="options"
+          *ngFor="let keys of objectKeys(i.options)"
+          (click)="checkAnswer(i.options[keys], i.trueOptions, keys)"
+          [ngClass]="{
+            correct: selectedKey === keys && isCorrect,
+            wrong: selectedKey === keys && !isCorrect
+          }"
+        >
+          {{ keys }} - {{ i.options[keys] }}
+        </button>
+      </div>
+    </div>
+
+    <div
+      style="
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+      "
+    >
+      <button type="button" (click)="increase()" class="next_button">
+        Next
+      </button>
+      <a
+        routerLink="/kitchenResult"
+        class="next_button"
+        [queryParams]="{
+          trueCounter: isCorrectTrueCounter.length,
+          falseCounter: isCorrectFalseCounter.length,
+          blankCounter: isCorrectBlankCounter.length
+        }"
+        >Result</a
+      >
+    </div>
+  </div>
+</div>
