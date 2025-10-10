@@ -15,6 +15,7 @@ export class SuggestionsComponent {
       name: [''],
       surname: [''],
       email: [''],
+      textarea: [''],
     });
   }
 
