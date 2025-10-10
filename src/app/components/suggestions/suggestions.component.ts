@@ -21,4 +21,7 @@ export class SuggestionsComponent {
   onSubmit(data) {
     console.log(data);
   }
+  send() {
+    alert('Form sent!');
+  }
 }
