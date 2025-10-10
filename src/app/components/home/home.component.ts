@@ -7,6 +7,7 @@ import { Router, RouterLink, RouterOutlet } from '@angular/router';
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
   standalone: true,
+  imports: [RouterLink],
 })
 export class HomeComponent {
   constructor(private router: Router) {}

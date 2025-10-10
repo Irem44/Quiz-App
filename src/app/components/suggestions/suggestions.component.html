@@ -1,0 +1,14 @@
+<h1>For Suggestions</h1>
+<div class="form">
+  <form [formGroup]="frm" (ngSubmit)="onSubmit(frm.value)">
+    <input type="text" placeholder="Name" formControlName="name" /><br />
+    <input type="text" placeholder="Surname" formControlName="surname" /><br />
+    <input type="text" placeholder="Email" formControlName="email" /><br />
+    <textarea
+      name="comment"
+      id="comment"
+      placeholder="Enter Comment Please"
+    ></textarea>
+    <button>Send</button>
+  </form>
+</div>

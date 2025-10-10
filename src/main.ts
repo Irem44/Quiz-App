@@ -12,6 +12,7 @@ import { KitchenComponent } from './app/components/kitchen/kitchen.component';
 import { VegatablesResaultComponent } from './app/components/vegatables-resault/vegatables-resault.component';
 import { RoomResaultComponent } from './app/components/room-resault/room-resault.component';
 import { KitchenResaultComponent } from './app/components/kitchen-resault/kitchen-resault.component';
+import { SuggestionsComponent } from './app/components/suggestions/suggestions.component';
 
 bootstrapApplication(AppComponent, {
   providers: [
@@ -19,6 +20,7 @@ bootstrapApplication(AppComponent, {
     provideRouter([
       { path: '', redirectTo: 'home', pathMatch: 'full' },
       { path: 'home', component: HomeComponent },
+      { path: 'suggestions', component: SuggestionsComponent },
       { path: 'questions', component: QuestionsComponent },
       { path: 'vegatables', component: VegatablesComponent },
       { path: 'room', component: RoomComponent },

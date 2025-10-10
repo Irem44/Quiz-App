@@ -4,3 +4,15 @@
   margin: 0;
   box-sizing: border-box;
 }
+app-suggestions {
+  height: 89vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    color: #102e50;
+    margin-bottom: 10px;
+  }
+}
